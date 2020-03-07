@@ -18,5 +18,5 @@ def create_app():
     @app.route("/healthcheck")
     def healthcheck():
         return jsonify({"message": "ok"})
-    
+
     return app

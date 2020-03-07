@@ -1,5 +1,5 @@
 import json
-from behave import when, then
+from behave import given, when, then
 
 
 @given('the message "{message}"')
@@ -22,6 +22,7 @@ def step_verb_impl(context, verb, endpoint):
 @then('the status code should be {status_code}')
 def step_status_code_impl(context, status_code):
     assert context.response.status_code == int(status_code)
+
 
 @then('there should be a message saying "{message}"')
 def step_check_response_message(context, message):

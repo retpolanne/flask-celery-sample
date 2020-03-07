@@ -3,6 +3,7 @@ from sample_app.factories.celery import make_celery
 
 bp = Blueprint('echo', __name__, url_prefix='/echo')
 
+
 @bp.route('/send-message', methods=['POST'])
 def echo():
     if request.method != 'POST':

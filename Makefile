@@ -2,8 +2,8 @@
 
 install:
 	pipenv install
-# TODO fix lint
-#test: lint test-unit test-behave
+
+test: lint test-unit test-behave
 
 test: test-unit test-behave
 
@@ -18,7 +18,13 @@ test-e2e:
 test-e2e-local:
 
 lint:
-	find . -type f -name "*.py" -exec pipenv run pylint --load-plugins pylint_flask {} \;
+	pipenv run flake8
+
+fix-lint:
+	./scripts/fix-lint.sh
+
+coverage:
+	pipenv run coverage run -m pytest
 
 run-server:
 	pipenv run flask run
