@@ -1,13 +1,3 @@
-from flask import Flask, jsonify
+from sample_app.factories.flask import create_app
 
-def create_app():
-    app = Flask(__name__)
-
-    from . import echo
-    app.register_blueprint(echo.bp)
-
-    @app.route("/healthcheck")
-    def healthcheck():
-        return jsonify({"message": "ok"})
-    
-    return app
+app = create_app()

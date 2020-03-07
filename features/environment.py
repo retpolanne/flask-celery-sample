@@ -1,5 +1,5 @@
 from behave import fixture, use_fixture
-from sample_app import create_app
+from sample_app.factories.flask import create_app
 
 
 @fixture

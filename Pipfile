@@ -12,6 +12,7 @@ pytest = "*"
 ipdb = "*"
 pylint = "*"
 pylint-flask = "*"
+celery = "*"
 
 [requires]
 python_version = "3.8"

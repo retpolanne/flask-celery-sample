@@ -1,6 +1,6 @@
 import pytest
 
-from sample_app import create_app
+from sample_app.factories.flask import create_app
 
 @pytest.fixture(scope="module")
 def flask_client():

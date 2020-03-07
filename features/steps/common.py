@@ -2,6 +2,11 @@ import json
 from behave import when, then
 
 
+@given('the message "{message}"')
+def step_sent_message(context, message):
+    context.data["message"] = message
+
+
 @when('I make a {verb} to "{endpoint}"')
 def step_verb_impl(context, verb, endpoint):
     if verb == "get":

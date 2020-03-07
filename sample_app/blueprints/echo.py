@@ -8,3 +8,13 @@ def echo():
         return Response(status=405)
     message = request.get_json().get("message")
     return jsonify({"message": message})
+
+
+@bp.route('/send-mail', methods=['POST'])
+def send_mail():
+    if request.method != 'POST':
+        return Response(status=405)
+    payload = request.get_json()
+    message = payload.get("message")
+    email_address = payload.get("email_address")
+    return Response(status=201)
