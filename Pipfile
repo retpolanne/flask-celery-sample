@@ -13,6 +13,8 @@ ipdb = "*"
 pylint = "*"
 pylint-flask = "*"
 celery = "*"
+python-dotenv = "*"
+redis = "*"
 
 [requires]
 python_version = "3.8"

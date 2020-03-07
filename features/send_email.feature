@@ -1,12 +1,11 @@
-Feature: Send Mail with Message
+Feature: Send Email with Message
 
-    Scenario: Make a send mail request
+    Scenario: Make a send email request
         Given the message "hello world"
           and the email address "foobar@helloworld.io"
-         When I make a post to "/echo/send-mail"
+         When I make a post to "/echo/send-email"
          Then the status code should be 201
-          and the task "send_mail" should be scheduled
     
     Scenario: Send a get instead of post
-         When I make a get to "/echo/send-mail"
+         When I make a get to "/echo/send-email"
          Then the status code should be 405

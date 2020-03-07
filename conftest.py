@@ -8,3 +8,11 @@ def flask_client():
     app.config['TESTING'] = True
     client = app.test_client()
     yield client
+
+
+@pytest.fixture(scope='module')
+def celery_config():
+    return {
+        'broker_url': 'redis://',
+        'result_backend': 'redis://'
+    }
