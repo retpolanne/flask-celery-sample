@@ -4,8 +4,7 @@ from sample_app.factories.flask import create_app
 
 @fixture
 def app_client(context, *args, **kwargs):
-    app = create_app()
-    app.config['TESTING'] = True
+    app = create_app(testing=True)
     context.client = app.test_client()
     yield context.client
 

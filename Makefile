@@ -5,8 +5,6 @@ install:
 
 test: lint test-unit test-behave
 
-test: test-unit test-behave
-
 test-unit:
 	pipenv run pytest -s
 
