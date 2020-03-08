@@ -1,0 +1,22 @@
+resources:
+  - base/deployment.yaml
+  - base/service.yaml
+  - base/ingress.yaml
+
+namespace: flask-celery-sample
+namePrefix: flask-celery-sample
+
+commonLabels:
+  app: flask-celery-sample
+  env: production
+
+images:
+- name: appimage
+  newName: gcr.io/teresa-hacktoberfest/flask-celery-sample
+  newTag: latest
+
+configMapGenerator:
+  - name: env-vars
+    literals:
+    - FLASK_APP=flask-celery-sample
+    - ENV=production

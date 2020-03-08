@@ -9,7 +9,7 @@ def create_app(testing=False):
     if os.getenv("ENV") == "test" or testing:
         app.config.from_object('sample_app.config.TestingConfig')
     if os.getenv("ENV") == "production":
-        app.config.from_object('sample_app.config.ProductionConfig')
+        app.config.from_object('sample_app.config.Config')
     if os.getenv("ENV") == "development":
         app.config.from_object('sample_app.config.DevelopmentConfig')
 

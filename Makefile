@@ -1,31 +1,45 @@
 .PHONY: lint test-unit test-behave
 
 install:
-	pip3 install --user pipenv
-	pipenv install
+	pip install -r requirements.txt
 
 test: lint test-unit test-behave
 
 test-unit:
-	pipenv run pytest -s
+	 pytest -s
 
 test-behave:
-	pipenv run behave
+	 behave
 
 test-e2e:
 
 test-e2e-local:
 
 lint:
-	pipenv run flake8
+	 flake8
 
 fix-lint:
 	./scripts/fix-lint.sh
 
 coverage:
-	pipenv run coverage run -m pytest
+	 coverage run -m pytest
 
 run-server:
-	pipenv run flask run
+	 flask run
+
+run-server-prod:
+	 uwsgi --http 0.0.0.0:${PORT} --module sample_app:app
 
 run-worker:
+
+docker-build:
+	docker build . -t ${TAG}
+
+docker-run:
+	docker run ${TAG} ${COMMAND}
+
+docker-push:
+	docker push ${TAG}
+
+deploy-k8s:
+	kubectl apply -k kustomize
