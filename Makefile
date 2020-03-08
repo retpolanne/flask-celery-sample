@@ -1,6 +1,7 @@
 .PHONY: lint test-unit test-behave
 
 install:
+	pip3 install --user pipenv
 	pipenv install
 
 test: lint test-unit test-behave
