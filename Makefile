@@ -3,7 +3,8 @@
 install:
 	pip install -r requirements.txt
 
-test: lint test-unit test-behave
+#test: lint test-unit test-behave
+test: lint test-unit
 
 test-unit:
 	 pytest -s
