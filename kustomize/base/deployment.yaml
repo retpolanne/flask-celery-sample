@@ -24,9 +24,6 @@ spec:
         envFrom:
           - configMapRef:
               name: env-vars
-        env:
-        - name: PORT
-          value: 5000
         livenessProbe:
           httpGet:
             path: /healthcheck

@@ -20,3 +20,4 @@ configMapGenerator:
     literals:
     - FLASK_APP=flask-celery-sample
     - ENV=production
+    - PORT=5000
