@@ -3,16 +3,13 @@
 install:
 	pip3 install -r requirements.txt
 
-#test: lint test-unit test-behave
-#test: lint test-unit
-
-test:
+test: lint test-unit test-behave
 
 test-unit:
-	 python3 -m pytest -s
+	 ENV=test python3 -m pytest -s
 
 test-behave:
-	 python3 -m behave
+	 ENV=test python3 -m behave
 
 test-e2e:
 
