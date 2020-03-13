@@ -17,8 +17,8 @@ spec:
       containers:
       - name: appimage
         image: appimage
-        command: ["/bin/bash"]
-        args: ["-c", "start", "web"]
+        command: ["make"]
+        args: ["run-server-prod"]
         ports:
         - containerPort: 5000
         envFrom:
