@@ -12,7 +12,7 @@ commonLabels:
 
 images:
 - name: appimage
-  newName: gcr.io/teresa-hacktoberfest/flask-celery-sample
+  newName: docker.io/sucymanbaravan/flask-celery-sample
   newTag: latest
 
 configMapGenerator:
