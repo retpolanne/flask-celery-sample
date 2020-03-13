@@ -7,23 +7,23 @@ install:
 test: lint test-unit
 
 test-unit:
-	 pytest -s
+	 python3 -m pytest -s
 
 test-behave:
-	 behave
+	 python3 -m behave
 
 test-e2e:
 
 test-e2e-local:
 
 lint:
-	 flake8
+	 python3 -m flake8
 
 fix-lint:
 	./scripts/fix-lint.sh
 
 coverage:
-	 coverage run -m pytest
+	 python3 -m coverage run -m pytest
 
 run-server:
 	 flask run
