@@ -4,7 +4,9 @@ install:
 	pip3 install -r requirements.txt
 
 #test: lint test-unit test-behave
-test: lint test-unit
+#test: lint test-unit
+
+test:
 
 test-unit:
 	 python3 -m pytest -s
