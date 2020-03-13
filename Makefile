@@ -1,7 +1,7 @@
 .PHONY: lint test-unit test-behave
 
 install:
-	pip install -r requirements.txt
+	pip3 install -r requirements.txt
 
 #test: lint test-unit test-behave
 test: lint test-unit
