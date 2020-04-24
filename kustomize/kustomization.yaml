@@ -3,7 +3,7 @@ resources:
   - base/service.yaml
   - base/ingress.yaml
 
-namespace: flask-celery-sample
+#namespace: flask-celery-sample
 namePrefix: flask-celery-sample
 
 commonLabels:
